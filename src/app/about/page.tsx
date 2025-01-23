@@ -246,9 +246,12 @@ const Page = () => {
           At SMILE Store, every purchase, every partnership, and every story contributes to a greater good. Together, we can create a world where compassion leads and inclusion thrives.
 
           </p>
+          <a href="/partners">
           <button className="bg-primaryBlue text-light px-8 py-3 rounded-full font-semibold hover:bg-secondaryBlue transition-colors font-poppins animate-pulseCustom">
             Partner With Us
           </button>
+          </a>
+        
         </div>
         <Footer/>
       </section>

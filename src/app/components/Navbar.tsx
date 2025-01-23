@@ -17,12 +17,12 @@ const NavBarMenu = [
   {
     id: 3,
     title: "Partners",
-    path: "/",
+    path: "/partners",
   },
   {
     id: 4,
     title: "Careers",
-    path: "/",
+    path: "/careers",
   },
 ];
 const Navbar = () => {

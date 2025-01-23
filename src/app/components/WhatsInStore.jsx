@@ -31,7 +31,7 @@ const WhatsInStore = () => {
       color: "bg-orange-400",
       image: "/shop-online.png", 
       headingColor : "text-orange-800",
-      subTextHeadingColor : "text-orange-800",
+      subTextHeadingColor : "text-orange-700",
       heading: "Shop Online Anytime",
       text: "With our e-commerce platform, your groceries are just a click away.",
     },
@@ -52,13 +52,13 @@ const WhatsInStore = () => {
               <img
                 src={card.image}
                 alt={card.heading}
-                className="w-full h-100 object-contain"
+                className="w-full h-120 object-contain"
               />
               <div className="p-4">
-              <h3 className={`text-2xl font-semibold font-serif text-white mb-2 ${card.headingColor}`}>
+              <h3 className={`text-3xl font-semibold font-serif mb-2 ${card.headingColor}`}>
                   {card.heading}
                 </h3>
-                <p className = {`text-white text-sm font-poppins font-bold ${card.subTextHeadingColor}`}>{card.text}</p>
+                <p className = {`text-lg font-poppins font-semibold ${card.subTextHeadingColor}`}>{card.text}</p>
               </div>
             </div>
           ))}

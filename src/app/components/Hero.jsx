@@ -38,7 +38,7 @@ const Hero = () => {
               variants={FadeUp(0.6)}
               initial="initial"
               animate="animate"
-              className="text-left font-poppins font-extrabold text-primaryBlue text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight flex items-center"
+              className="text-left font-serif font-extrabold text-primaryBlue headingText leading-snug flex items-center"
             >
               <span className="text-primaryBlue first-letter-effect">S</span>
               <span className="text-secondaryBlue">mile</span>
@@ -50,7 +50,6 @@ const Hero = () => {
               <br />
               <span className="text-blossomRed"></span>
             </motion.h1>
-
             <motion.h4
               as="h4"
               variants={FadeUp(0.6)}

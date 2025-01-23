@@ -10,7 +10,7 @@ const VisionBuiltOnSmile = () => {
             <h2 className="text-4xl sm:text-4xl font-bold font-serif text-left text-ultravioletBlue mb-4">
               Vision Built on Smiles!
             </h2>
-            <p className="text-black font-serif text-lg sm:text-xl text-left sm:ml-3">
+            <p className="text-black font-poppins text-lg sm:text-xl text-left sm:ml-3">
               At the SMILE Store, we dream of a world where everyone gets a fair
               chance, where communities come together, and where kindness is a
               way of life. Every time you shop with us, you’re helping make that
@@ -26,7 +26,7 @@ const VisionBuiltOnSmile = () => {
             <h2 className="text-4xl sm:text-4xl font-bold font-serif text-right text-ultravioletBlue mb-4">
               Let’s Build a Better Community Together
             </h2>
-            <p className="text-black font-serif text-lg sm:text-xl text-right sm:mr-3">
+            <p className="text-black font-poppins text-lg sm:text-xl text-right sm:mr-3">
               When you choose a SMILE Store, you’re not just buying groceries—you’re investing in hope, inclusion, and the strength of our neighborhood.
             </p>
           </div>

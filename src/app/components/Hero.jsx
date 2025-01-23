@@ -70,7 +70,7 @@ const Hero = () => {
               variants={FadeUp(0.8)}
               initial="initial"
               animate="animate"
-              className="flex justify-center md:justify-start items-center italic sm:text-wrap p-2"
+              className="flex justify-center md:justify-start items-center italic sm:text-wrap p-2 font-poppins text-xl"
             >
               At SMILE Store, we’re not just a grocery store—we’re a community
               built on care, inclusion, and empowerment. Our stores are led by

@@ -69,7 +69,7 @@ const WhyShopAtSmileStore = () => {
             >
               <div className="icon-heading flex items-center gap-2">
                 <span className="icon text-ultravioletBlue text-3xl">{item.icon}</span>
-                <h1 className="headingGrid font-serif text-primaryRed text-xl font-semibold">
+                <h1 className="headingGrid font-serif text-primaryRed text-2xl font-semibold">
                   {item.heading}
                 </h1>
               </div>

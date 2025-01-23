@@ -12,21 +12,16 @@ const NavBarMenu = [
   {
     id: 2,
     title: "About Us",
-    path: "/",
+    path: "/about",
   },
   {
     id: 3,
-    title: "Projects",
+    title: "Partners",
     path: "/",
   },
   {
     id: 4,
-    title: "Blogs",
-    path: "/",
-  },
-  {
-    id: 5,
-    title: "Contact Us",
+    title: "Careers",
     path: "/",
   },
 ];
@@ -35,7 +30,7 @@ const Navbar = () => {
 
   return (
     <nav className="px-0 z-30 sticky top-0 bg-primary border-b-2 navbarModification">
-      <div className="container px-0 py-6 flex justify-between items-center bg-primary">
+      <div className="container px-0 py-6 flex justify-between items-center bg-white">
         {/* Logo Section */}
         <div className="flex-shrink-0">
         <Image src="/smile_store_logo.png" alt="Logo" width={30} height={16} className="h-16 w-auto" />   
@@ -56,7 +51,7 @@ const Navbar = () => {
             ))}
             <button className="get-in-touch hover:animate-pulseCustom">
               <span className="flex items-center space-x-2">
-                <div>Get In Touch</div>
+                <div>Shop Now</div>
                 <div>
                   <HiArrowUpRight />
                 </div>

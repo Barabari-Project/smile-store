@@ -156,7 +156,7 @@ const Page = () => {
       {/* Team Section */}
       <section className="py-16 bg-gradient-to-b from-light to-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-ultravioletBlue mb-12 font-poppins">Our Team</h2>
+          <h2 className="text-5xl font-bold text-center text-ultravioletBlue mb-12 font-serif">Our Team</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -241,7 +241,7 @@ const Page = () => {
       {/* Call to Action Section */}
       <section className="pt-16 bg-gradient-to-br from-lightBlue to-secondaryBlue">
         <div className="container mx-auto px-4 text-center pb-2">
-          <h2 className="text-3xl font-bold text-ultravioletBlue mb-8 font-serif">Join Our Mission</h2>
+          <h2 className="text-5xl font-bold text-ultravioletBlue mb-8 font-serif">Join Our Mission</h2>
           <p className="text-lg text-ultravioletBlue/80 mb-8 max-w-2xl mx-auto font-poppins">
           At SMILE Store, every purchase, every partnership, and every story contributes to a greater good. Together, we can create a world where compassion leads and inclusion thrives.
 

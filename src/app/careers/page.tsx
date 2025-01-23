@@ -198,7 +198,7 @@ const CareersPage = () => {
               >
                 <div className=" text-3xl flex items-center mb-4">
                   {benefit.icon}
-                  <h3 className="text-2xl font-serif font-semibold text-ultravioletBlue ml-3 font-poppins">{benefit.title}</h3>
+                  <h3 className="text-2xl font-serif font-semibold text-ultravioletBlue ml-3">{benefit.title}</h3>
                 </div>
                 <p className="text-ultravioletBlue/80 text-md font-poppins">{benefit.description}</p>
               </motion.div>

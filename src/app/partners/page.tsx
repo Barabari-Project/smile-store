@@ -2,8 +2,26 @@
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 
 export default function PartnersPage() {
+  const router = useRouter();
+
+  const getFormPath = (modelTitle: string) => {
+    switch(modelTitle) {
+      case 'SMILE Catalyst':
+        return '/forms/catalyst';
+      case 'SMILE Enabler':
+        return '/forms/enabler';
+      case 'SMILE Delivery':
+        return '/forms/deliverypartner';
+      case 'Compassionate Credit':
+        return '/forms/compassionatecredit';
+      default:
+        return '/forms';
+    }
+  };
+
   return (
     <>
     <Navbar />
@@ -14,7 +32,7 @@ export default function PartnersPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-7xl pt-2 font-serif md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+          className="text-8xl pt-2 font-serif md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
         >
           Join Us to Build an Inclusive Commerce
         </motion.h1>
@@ -41,17 +59,29 @@ export default function PartnersPage() {
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${model.bgColor} opacity-10`} />
               <div className="relative p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className={`h-16 w-16 rounded-2xl bg-gradient-to-br ${model.color}
-                    flex items-center justify-center shadow-[0_0_10px_rgba(0,0,0,0.1)]`}
-                  >
-                    <span className="text-3xl text-white">{model.icon}</span>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-4">
+                    <div className={`h-16 w-16 rounded-2xl bg-gradient-to-br ${model.color}
+                      flex items-center justify-center shadow-[0_0_10px_rgba(0,0,0,0.1)]`}
+                    >
+                      <span className="text-3xl text-white">{model.icon}</span>
+                    </div>
+                    <h3 className={`text-4xl font-serif font-bold bg-gradient-to-r ${model.color}
+                      bg-clip-text text-transparent`}
+                    >
+                      {model.title}
+                    </h3>
                   </div>
-                  <h3 className={`text-4xl font-serif font-bold bg-gradient-to-r ${model.color}
-                    bg-clip-text text-transparent`}
+                  <button 
+                    onClick={() => router.push(getFormPath(model.title))}
+                    className={`px-6 py-2 rounded-full bg-gradient-to-r ${model.color} text-white 
+                      font-semibold hover:opacity-90 transition-opacity duration-300 shadow-md`}
                   >
-                    {model.title}
-                  </h3>
+                    {model.title === 'SMILE Catalyst' && 'Become a Catalyst'}
+                    {model.title === 'SMILE Enabler' && 'Become an Enabler'}
+                    {model.title === 'SMILE Delivery' && 'Join Delivery'}
+                    {model.title === 'Compassionate Credit' && 'Apply for Credit'}
+                  </button>
                 </div>
                 
                 <p className="text-gray-600 font-poppins text-md mb-6">
@@ -95,6 +125,37 @@ export default function PartnersPage() {
         </div>
       </section>
 
+   {/* New Investor Section */}
+   <section className="container mx-auto px-4 py-16 text-center">
+        <h2 className="text-5xl font-serif font-bold mb-6">Invest in Inclusive Growth</h2>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Join us in building a more inclusive future. Invest in SMILE Store&apos;s mission to create sustainable impact 
+          through our innovative partnership models.
+        </p>
+        <button
+          onClick={() => router.push('/forms/investor')}
+          className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xl
+            rounded-full hover:opacity-90 duration-300 shadow-lg
+            transform hover:-translate-y-1 hover:shadow-xl transition-all"
+        >
+          Become an Investor
+        </button>
+        <div className="mt-8 flex flex-wrap justify-center gap-6 text-gray-600">
+          <div className="flex items-center">
+            <span className="text-2xl mr-2">💡</span>
+            <span>Multiple Investment Options</span>
+          </div>
+          <div className="flex items-center">
+            <span className="text-2xl mr-2">📈</span>
+            <span>Sustainable Returns</span>
+          </div>
+          <div className="flex items-center">
+            <span className="text-2xl mr-2">🌍</span>
+            <span>Social Impact</span>
+          </div>
+        </div>
+      </section>
+
       {/* Why partner with us? */}
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-5xl font-serif font-bold text-center mb-12">Why Partner with Us?</h2>
@@ -129,9 +190,7 @@ export default function PartnersPage() {
         </div>
       </section>
 
-
-      {/* Sign Up Forms */}
-    
+   
 
       {/* Contact Section */}
       <Footer />

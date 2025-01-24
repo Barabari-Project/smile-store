@@ -29,20 +29,24 @@ const Page = () => {
     <>
     <Navbar />
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-100">
-    <section className="container mx-auto px-4 py-16 md:py-24">
-        <motion.div
+
+      <section className="container mx-auto px-4 py-16 text-center">
+        <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-4xl mx-auto"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-8xl pt-2 font-serif md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
         >
-          <h1 className="text-8xl font-poppins md:text-8xl font-bold text-ultravioletBlue mb-6">
-            About SMILE Store
-          </h1>
-          <p className="text-lg text-ultravioletBlue/80 mb-2 font-poppins">
-            A place where inclusive retail transforms lives and empowers communities.
-          </p>
-        </motion.div>
+          About SMILE Store
+        </motion.h1>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="text-2xl md:text-2xl text-gray-600 mb-8"
+        >
+           A place where inclusive retail transforms lives and empowers communities.
+        </motion.p>
       </section>
 
       {/* Vision & Mission Section */}

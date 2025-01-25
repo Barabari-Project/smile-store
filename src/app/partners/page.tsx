@@ -46,6 +46,41 @@ export default function PartnersPage() {
         </motion.p>
       </section>
 
+
+      <section className="container mx-auto px-4 py-6 mb-24">
+        <h2 className="text-5xl font-serif font-bold text-center mb-12">Why Partner with Us?</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {whyPartnership.map((model, index) => (
+            <div 
+              key={index} 
+              className="group bg-gradient-to-br from-white to-blue-50 rounded-xl shadow-lg p-6 
+                hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 
+                hover:bg-gradient-to-br hover:from-blue-50 hover:to-purple-50
+                border border-transparent hover:border-blue-200"
+            >
+              <div className="h-12 w-12 mb-4 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 
+                flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300"
+              >
+                {/* Icons for each model */}
+                <span className="text-4xl text-white">
+                  {index === 0 && "🧑‍🤝‍🧑"}
+                  {index === 1 && "🌱"}
+                  {index === 2 && "🤝"}
+                  {index === 3 && "🏘️"}
+                </span>
+              </div>
+              <h3 className="text-3xl font-serif font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 
+                bg-clip-text text-transparent group-hover:from-blue-700 group-hover:to-purple-700"
+              >
+                {model.title}
+              </h3>
+              <p className="text-gray-600 text-xl font-poppins mb-4 group-hover:text-gray-700">{model.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
       {/* Partnership Models */}
       <section className="container mx-auto px-4">
         <h2 className="text-5xl font-serif font-bold text-center mb-12">Partnership Models</h2>
@@ -155,42 +190,6 @@ export default function PartnersPage() {
           </div>
         </div>
       </section>
-
-      {/* Why partner with us? */}
-      <section className="container mx-auto px-4 py-16">
-        <h2 className="text-5xl font-serif font-bold text-center mb-12">Why Partner with Us?</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {whyPartnership.map((model, index) => (
-            <div 
-              key={index} 
-              className="group bg-gradient-to-br from-white to-blue-50 rounded-xl shadow-lg p-6 
-                hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 
-                hover:bg-gradient-to-br hover:from-blue-50 hover:to-purple-50
-                border border-transparent hover:border-blue-200"
-            >
-              <div className="h-12 w-12 mb-4 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 
-                flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300"
-              >
-                {/* Icons for each model */}
-                <span className="text-4xl text-white">
-                  {index === 0 && "🧑‍🤝‍🧑"}
-                  {index === 1 && "🌱"}
-                  {index === 2 && "🤝"}
-                  {index === 3 && "🏘️"}
-                </span>
-              </div>
-              <h3 className="text-3xl font-serif font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 
-                bg-clip-text text-transparent group-hover:from-blue-700 group-hover:to-purple-700"
-              >
-                {model.title}
-              </h3>
-              <p className="text-gray-600 text-xl font-poppins mb-4 group-hover:text-gray-700">{model.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-   
 
       {/* Contact Section */}
       <Footer />

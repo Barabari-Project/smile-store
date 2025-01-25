@@ -1,6 +1,10 @@
 import mongoose from 'mongoose';
 
 const investorSchema = new mongoose.Schema({
+  _id: { 
+    type: String, 
+    required: true, 
+  },
   fullName: { 
     type: String, 
     required: true 

@@ -90,6 +90,8 @@ const CareersPage = () => {
           </div>
         </div>
 
+
+
         {/* Current Openings Section */}
         <div className="py-16 bg-gradient-to-b from-gray-50 to-white">
           <div className="container mx-auto px-4">
@@ -282,3 +284,5 @@ const CareersPage = () => {
 };
 
 export default CareersPage;
+
+

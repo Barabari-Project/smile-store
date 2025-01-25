@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/about/page.jsx", "src/app/not-found.jsx", "src/app/loading.jsx", "src/lib/s3Upload.js"],
   "exclude": ["node_modules"]
 }

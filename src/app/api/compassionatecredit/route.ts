@@ -1,37 +1,52 @@
 import { NextResponse } from "next/server";
 import dbConnect from '@/lib/dbConnect';
 import CompassionateCreditModel from '../../../../models/CompassionateCreditModel';
-import { uploadToCloudinary } from "@/lib/cloudinaryConnect";
+import { v4 as uuidv4 } from 'uuid';
+import uploadToS3  from "@/lib/s3Upload"
 
 export async function POST(req: Request) {
   try {
     await dbConnect();
     const formData = await req.formData();
 
-    const idProof = formData.get('idProof') as File;
-    const addressProof = formData.get('addressProof') as File;
-    const incomeCertificate = formData.get('incomeCertificate') as File;
+    let idProof = formData.get('idProof') as File;
+    let addressProof = formData.get('addressProof') as File;
+    let incomeCertificate = formData.get('incomeCertificate') as File;
     
-    const documentUrls = {
+    let documentUrls = {
       idProof: '',
       addressProof: '',
       incomeCertificate: ''
-    };
+    }; 
+
+    const newUUID = uuidv4(); 
+    
+    const addressProofNewName = `${newUUID}.pdf`;
+    addressProof = new File([addressProof], addressProofNewName, { type: addressProof.type });
+
+    const idProofNewName = `${newUUID}.pdf`;
+    idProof = new File([idProof], idProofNewName, { type: idProof.type });
+
+
+    const incomeCertificateNewName = `${newUUID}.pdf`;
+    incomeCertificate = new File([incomeCertificate], incomeCertificateNewName, { type: incomeCertificate.type });
+
     
     if (idProof) {
-      documentUrls.idProof = await uploadToCloudinary(idProof, 'compassionate-credit/id-proofs');
+      documentUrls.idProof = await uploadToS3('compassionate-credit/id-proofs', idProofNewName, idProof);
     }
     
     if (addressProof) {
-      documentUrls.addressProof = await uploadToCloudinary(addressProof, 'compassionate-credit/address-proofs');
+      documentUrls.addressProof = await uploadToS3('compassionate-credit/address-proofs', addressProofNewName, addressProof);
     }
 
     if (incomeCertificate) {
-      documentUrls.incomeCertificate = await uploadToCloudinary(incomeCertificate, 'compassionate-credit/income-certificates');
+      documentUrls.incomeCertificate = await uploadToS3('compassionate-credit/income-certificates', incomeCertificateNewName, incomeCertificate);
     }
 
     // Create credit application data object
     const creditData = {
+      _id:newUUID,
       fullName: formData.get('fullName'),
       email: formData.get('email'),
       phone: formData.get('phone'),

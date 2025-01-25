@@ -1,31 +1,42 @@
 import { NextResponse } from "next/server";
 import dbConnect from '@/lib/dbConnect';
 import InvestorModel from '../../../../models/InvestorModel';
-import { uploadToCloudinary } from "@/lib/cloudinaryConnect";
+import { v4 as uuidv4 } from 'uuid';
+import uploadToS3 from "@/lib/s3Upload";
 
 export async function POST(req: Request) {
   try {
     await dbConnect();
     const formData = await req.formData();
 
-    const businessRegistration = formData.get('businessRegistration') as File;
-    const financialProof = formData.get('financialProof') as File;
+    let businessRegistration = formData.get('businessRegistration') as File;
+    let financialProof = formData.get('financialProof') as File;
     
-    const documentUrls = {
+    let documentUrls = {
       businessRegistration: '',
       financialProof: ''
     };
     
+    const newUUID = uuidv4(); 
+
+    const businessRegistrationNewName =  `${newUUID}.pdf`;
+    businessRegistration = new File([businessRegistration], businessRegistrationNewName, { type: businessRegistration.type });
+
+    const financialProofNewName =  `${newUUID}.pdf`;
+    financialProof = new File([financialProof], financialProofNewName, { type: financialProof.type });
+
+
     if (businessRegistration) {
-      documentUrls.businessRegistration = await uploadToCloudinary(businessRegistration, 'investor-documents/business-registration');
+      documentUrls.businessRegistration = await uploadToS3('investor-documents/business-registration',businessRegistrationNewName , businessRegistration);
     }
     
     if (financialProof) {
-      documentUrls.financialProof = await uploadToCloudinary(financialProof, 'investor-documents/financial-proof');
+      documentUrls.financialProof = await uploadToS3('investor-documents/financial-proof', financialProofNewName, financialProof);
     }
 
     // Create investor data object
     const investorData = {
+      _id : newUUID,
       fullName: formData.get('fullName'),
       email: formData.get('email'),
       phone: formData.get('phone'),

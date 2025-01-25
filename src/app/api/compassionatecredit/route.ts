@@ -13,7 +13,7 @@ export async function POST(req: Request) {
     let addressProof = formData.get('addressProof') as File;
     let incomeCertificate = formData.get('incomeCertificate') as File;
     
-    let documentUrls = {
+    const documentUrls = {
       idProof: '',
       addressProof: '',
       incomeCertificate: ''

@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     let businessRegistration = formData.get('businessRegistration') as File;
     let financialProof = formData.get('financialProof') as File;
     
-    let documentUrls = {
+    const documentUrls = {
       businessRegistration: '',
       financialProof: ''
     };

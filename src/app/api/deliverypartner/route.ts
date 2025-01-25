@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     let idProof = formData.get('idProof') as File;
     let vehicleInsurance = formData.get('vehicleInsurance') as File;
     
-    let documentUrls = {
+    const documentUrls = {
       idProof: '',
       vehicleInsurance: ''
     };

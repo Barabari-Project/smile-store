@@ -1,9 +1,14 @@
 "use client";
-import React from 'react';
-import { FaPeopleArrows, FaShoppingCart, FaHandsHelping, FaHome } from 'react-icons/fa';
-import { motion } from 'framer-motion';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; 
+import React from "react";
+import {
+  FaPeopleArrows,
+  FaShoppingCart,
+  FaHandsHelping,
+  FaHome,
+} from "react-icons/fa";
+import { motion } from "framer-motion";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 const WhyShopAtSmileStore = () => {
   const containerVariant = {
     hidden: { opacity: 0 },
@@ -23,23 +28,23 @@ const WhyShopAtSmileStore = () => {
   const content = [
     {
       icon: <FaPeopleArrows />,
-      heading: 'Empowering People, Changing Lives',
-      text: 'Every store is run by people with unique abilities, proving that everyone has something amazing to contribute. Your support gives individuals the chance to shine.',
+      heading: "Empowering People, Changing Lives",
+      text: "Every store is run by people with unique abilities, proving that everyone has something amazing to contribute. Your support gives individuals the chance to shine.",
     },
     {
       icon: <FaShoppingCart />,
-      heading: 'Groceries That Care for Your Wallet',
-      text: 'We believe everyone deserves access to good food, no matter their circumstances. That’s why we offer fair prices and special discounts for those who need it most.',
+      heading: "Groceries That Care for Your Wallet",
+      text: "We believe everyone deserves access to good food, no matter their circumstances. That’s why we offer fair prices and special discounts for those who need it most.",
     },
     {
       icon: <FaHandsHelping />,
-      heading: 'Strengthening Our Neighborhoods',
-      text: 'Your purchase doesn’t just buy groceries—it helps uplift low-income families, seniors, and people with disabilities in our community.',
+      heading: "Strengthening Our Neighborhoods",
+      text: "Your purchase doesn’t just buy groceries—it helps uplift low-income families, elders, and people with disabilities in our community.",
     },
     {
       icon: <FaHome />,
-      heading: 'An Inclusive Place for All',
-      text: 'Our stores are welcoming spaces designed for everyone—whether you’re a parent, a senior, or someone with different needs, you’ll always feel at home here.',
+      heading: "An Inclusive Place for All",
+      text: "Our stores are welcoming spaces designed for everyone—whether you’re a parent, a elder, or someone with different needs, you’ll always feel at home here.",
     },
   ];
 
@@ -76,12 +81,14 @@ const WhyShopAtSmileStore = () => {
               variants={itemVariant}
             >
               <div className="icon-heading flex items-center gap-2">
-                <span className="icon text-ultravioletBlue text-3xl">{item.icon}</span>
+                <span className="icon text-ultravioletBlue text-3xl">
+                  {item.icon}
+                </span>
                 <h1 className="headingGrid font-serif text-primaryRed text-xl font-semibold">
                   {item.heading}
                 </h1>
               </div>
-              <div className="subtext font-semibold font-poppins text-ultravioletBlue mt-2"> 
+              <div className="subtext font-semibold font-poppins text-ultravioletBlue mt-2">
                 {item.text}
               </div>
             </motion.div>

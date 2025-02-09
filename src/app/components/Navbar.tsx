@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { HiArrowUpRight } from "react-icons/hi2";
@@ -33,11 +33,10 @@ const Navbar = () => {
       <div className="container px-0 py-6 flex justify-between items-center bg-white">
         {/* Logo Section */}
         <Link href={"/"}>
-        <div className="flex-shrink-0">
-        <img src="/logo_resized.png" alt="Logo" className="h-16 w-auto" />   
-         </div>
+          <div className="flex-shrink-0">
+            <img src="/logo_resized.png" alt="Logo" className="h-16 w-auto" />
+          </div>
         </Link>
-        
 
         {/* Menu Section */}
         <div className="hidden lg:block flex-grow text-right bg-white ">
@@ -52,14 +51,16 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <button className="get-in-touch hover:animate-pulseCustom">
-              <span className="flex items-center space-x-2">
-                <div>Shop Now</div>
-                <div>
-                  <HiArrowUpRight />
-                </div>
-              </span>
-            </button>
+            <Link href={"https://vyaparapp.in/store/smilestore1"}>
+              <button className="get-in-touch hover:animate-pulseCustom">
+                <span className="flex items-center space-x-2">
+                  <div>Shop Now</div>
+                  <div>
+                    <HiArrowUpRight />
+                  </div>
+                </span>
+              </button>
+            </Link>
           </ul>
         </div>
 
@@ -102,14 +103,16 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <button className="get-in-touch hover:animate-pulseCustom">
-                <span className="flex items-center space-x-2">
-                  <div>Get In Touch</div>
-                  <div>
-                    <HiArrowUpRight />
-                  </div>
-                </span>
-              </button>
+              <Link href={"https://vyaparapp.in/store/smilestore1"}>
+                <button className="get-in-touch hover:animate-pulseCustom">
+                  <span className="flex items-center space-x-2">
+                    <div>Shop Now</div>
+                    <div>
+                      <HiArrowUpRight />
+                    </div>
+                  </span>
+                </button>
+              </Link>
             </ul>
           </div>
         </div>

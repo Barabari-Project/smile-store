@@ -87,8 +87,15 @@ export default function PartnersPage() {
         {/* Partnership Models Section */}
         <section className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-2xl md:text-5xl font-serif font-bold text-center mb-12">
-            Partnership Models
+            Be Our Partner
           </h2>
+
+          <section className="pt-4 pb-16 relative bg-gradient-to-b from-white to-gray-50">
+            <center>
+              {" "}
+              <img src="/approach_smile_store.png"></img>
+            </center>
+          </section>
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
             {partnershipModels.map((model, index) => (
               <div

@@ -1,43 +1,51 @@
-"use client"
-import React from 'react';
-import { motion } from 'framer-motion';
-import Navbar from '../components/Navbar';
-import Image from 'next/image';
-import Footer from '../components/Footer';
-import { useState } from 'react';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import Navbar from "../components/Navbar";
+import Image from "next/image";
+import Footer from "../components/Footer";
+import { useState } from "react";
+import { FaUser, FaStore, FaCogs, FaUsers } from "react-icons/fa";
 const Page = () => {
   const [activeTab, setActiveTab] = useState(0);
   const approachData = [
     {
       title: "Empowerment",
-      description: "Enabling persons with disabilities to lead independent lives by offering entrepreneurship and employment opportunities.",
+      description:
+        "Enabling persons with disabilities to lead independent lives by offering entrepreneurship and employment opportunities.",
       icon: "👥",
-      details: "We believe in creating meaningful opportunities that empower individuals with disabilities to achieve financial independence and personal growth. Through our innovative entrepreneurship programs and inclusive employment practices, we're building a foundation for lasting positive change in their lives."
+      details:
+        "We believe in creating meaningful opportunities that empower individuals with disabilities to achieve financial independence and personal growth. Through our innovative entrepreneurship programs and inclusive employment practices, we're building a foundation for lasting positive change in their lives.",
     },
     {
       title: "Accessibility",
-      description: "Establishing stores that cater to underserved communities with essential goods at affordable prices.",
+      description:
+        "Establishing stores that cater to underserved communities with essential goods at affordable prices.",
       icon: "🏪",
-      details: "Our stores are strategically located and designed to ensure easy access for all community members. We focus on providing essential goods at fair prices, making daily necessities available to everyone, regardless of their economic situation."
+      details:
+        "Our stores are strategically located and designed to ensure easy access for all community members. We focus on providing essential goods at fair prices, making daily necessities available to everyone, regardless of their economic situation.",
     },
     {
       title: "Sustainability",
-      description: "Creating scalable, community-focused models that ensure long-term impact.",
+      description:
+        "Creating scalable, community-focused models that ensure long-term impact.",
       icon: "🌱",
-      details: "By developing sustainable business models that benefit both our partners and communities, we ensure long-lasting positive impact. Our approach combines social responsibility with economic viability, creating a framework that can be replicated and scaled."
+      details:
+        "By developing sustainable business models that benefit both our partners and communities, we ensure long-lasting positive impact. Our approach combines social responsibility with economic viability, creating a framework that can be replicated and scaled.",
     },
     {
       title: "Collaboration",
-      description: "Partnering with organizations, investors, and individuals to build a stronger, more inclusive ecosystem.",
+      description:
+        "Partnering with organizations, investors, and individuals to build a stronger, more inclusive ecosystem.",
       icon: "🤝",
-      details: "We believe in the power of partnerships to create meaningful change. By collaborating with various stakeholders, from local organizations to international partners, we're building an ecosystem that promotes inclusivity and shared success."
-    }
+      details:
+        "We believe in the power of partnerships to create meaningful change. By collaborating with various stakeholders, from local organizations to international partners, we're building an ecosystem that promotes inclusivity and shared success.",
+    },
   ];
   return (
     <>
       <Navbar />
       <div className="min-h-screen bg-gradient-to-b from-white to-gray-100">
-
         <section className="container mx-auto px-4 py-16 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -53,7 +61,8 @@ const Page = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="text-2xl md:text-2xl text-gray-600 mb-8"
           >
-            A place where inclusive retail transforms lives and empowers communities.
+            A place where inclusive retail transforms lives and empowers
+            communities.
           </motion.p>
         </section>
 
@@ -63,12 +72,12 @@ const Page = () => {
           <motion.div
             animate={{
               y: [-20, 20, -20],
-              rotate: [0, 10, 0]
+              rotate: [0, 10, 0],
             }}
             transition={{
               duration: 8,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
             className="absolute top-20 left-10 opacity-10"
           >
@@ -96,18 +105,32 @@ const Page = () => {
                   <div className="absolute -top-6 left-8 bg-gradient-to-br from-lightBlue to-secondaryBlue p-4 rounded-xl shadow-lg">
                     <span className="text-3xl">👁️</span>
                   </div>
-                  <h2 className="text-5xl font-bold text-blue-900 mb-6 font-serif pt-4">Our Vision</h2>
+                  <h2 className="text-5xl font-bold text-blue-900 mb-6 font-serif pt-4">
+                    Vision
+                  </h2>
                   <div className="h-1 w-20 bg-gradient-to-r from-lightBlue to-secondaryBlue mb-6" />
                   <p className="text-blue-800 text-xl font-poppins leading-relaxed">
-                    To build an inclusive world where every individual, regardless of ability or background, has equal access to opportunities, dignity, and a thriving community.
+                    To build an inclusive world where every individual,
+                    regardless of ability or background, has equal access to
+                    opportunities, dignity, and a thriving community.
                   </p>
                   <motion.div
                     className="absolute bottom-4 right-4 text-blue-500"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   >
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <svg
+                      className="w-8 h-8"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                   </motion.div>
                 </div>
@@ -126,18 +149,37 @@ const Page = () => {
                   <div className="absolute -top-6 left-8 bg-gradient-to-br from-mimiRed to-cherryBlossomRed p-4 rounded-xl shadow-lg">
                     <span className="text-3xl">🎯</span>
                   </div>
-                  <h2 className="text-5xl font-bold text-red-800 mb-6 font-serif pt-4">Our Mission</h2>
+                  <h2 className="text-5xl font-bold text-red-800 mb-6 font-serif pt-4">
+                    Mission
+                  </h2>
                   <div className="h-1 w-20 bg-gradient-to-r from-mimiRed to-cherryBlossomRed mb-6" />
                   <p className="text-red-900 text-xl font-poppins leading-relaxed">
-                    To create a network of inclusive retail spaces that empower individuals with disabilities, support marginalized communities, and deliver essential goods with fairness and compassion.
+                    To create a network of inclusive retail spaces that empower
+                    individuals with disabilities, support marginalized
+                    communities, and deliver essential goods with fairness and
+                    compassion.
                   </p>
                   <motion.div
                     className="absolute bottom-4 right-4 text-red-500"
                     animate={{ rotate: [0, 360] }}
-                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
                   >
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg
+                      className="w-8 h-8"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                   </motion.div>
                 </div>
@@ -152,12 +194,12 @@ const Page = () => {
           <motion.div
             animate={{
               y: [20, -20, 20],
-              rotate: [0, -10, 0]
+              rotate: [0, -10, 0],
             }}
             transition={{
               duration: 8,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
             className="absolute bottom-20 right-10 opacity-10"
           >
@@ -171,23 +213,25 @@ const Page = () => {
           </motion.div>
         </section>
 
-
         <section className="py-16 bg-gradient-to-b from-white to-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="font-bold text-center text-ultravioletBlue mb-12 font-serif text-5xl">Our Approach</h2>
+            <h2 className="font-bold text-center text-ultravioletBlue mb-12 font-serif text-5xl">
+              Approach
+            </h2>
+
+            <section className="pt-4 pb-4 relative bg-gradient-to-b from-white to-gray-50">
+              <center>
+                {" "}
+                <img src="/approach_smile_store.png"></img>
+              </center>
+            </section>
 
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Left Side - Logo */}
-              <motion.div
-              
-                className="flex flex-col items-center justify-center"
-              >
+              <motion.div className="flex flex-col items-center justify-center">
                 {/* Increased size of logo container */}
                 <div className="relative w-full h-96 mb-8">
-                  <motion.div
-                    
-                    className="w-full h-full"
-                  >
+                  <motion.div className="w-full h-full">
                     <Image
                       src="/smile_store_logo.png"
                       alt="SMILE Store Logo"
@@ -209,10 +253,11 @@ const Page = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => setActiveTab(index)}
-                      className={`p-4 rounded-xl transition-all duration-300 ${activeTab === index
-                        ? 'bg-gradient-to-r from-primaryBlue to-secondaryBlue text-white shadow-lg'
-                        : 'bg-white text-primaryBlue hover:bg-gray-50'
-                        }`}
+                      className={`p-4 rounded-xl transition-all duration-300 ${
+                        activeTab === index
+                          ? "bg-gradient-to-r from-primaryBlue to-secondaryBlue text-white shadow-lg"
+                          : "bg-white text-primaryBlue hover:bg-gray-50"
+                      }`}
                     >
                       <div className="text-2xl mb-2">{item.icon}</div>
                       <div className="text-xl font-semibold">{item.title}</div>
@@ -231,7 +276,7 @@ const Page = () => {
                   <h3 className="text-3xl font-semibold text-primaryBlue mb-4 font-serif">
                     {approachData[activeTab].title}
                   </h3>
-                  <p className="text-xl text-ultravioletBlue font-poppins leading-relaxed">
+                  <p className="text-xl text-gray-800 font-poppins leading-relaxed">
                     {approachData[activeTab].details}
                   </p>
                 </motion.div>
@@ -240,7 +285,6 @@ const Page = () => {
           </div>
         </section>
 
-
         <section className="py-16 bg-gradient-to-b from-gray-50 to-light overflow-hidden">
           <div className="container mx-auto px-4">
             <motion.h2
@@ -248,7 +292,7 @@ const Page = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="text-5xl font-bold text-center text-ultravioletBlue mb-16 font-serif"
             >
-              Our Impact
+              Impact
             </motion.h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
@@ -278,7 +322,8 @@ const Page = () => {
                   </h3>
                   <div className="h-px w-16 bg-primaryBlue mb-4 mx-auto opacity-50" />
                   <p className="text-gray-600 font-poppins text-center">
-                    Hundreds of individuals with disabilities have found purpose and livelihood through our initiatives.
+                    Hundreds of individuals with disabilities have found purpose
+                    and livelihood through our initiatives.
                   </p>
                 </div>
               </motion.div>
@@ -306,7 +351,8 @@ const Page = () => {
                   </h3>
                   <div className="h-px w-16 bg-primaryBlue mb-4 mx-auto opacity-50" />
                   <p className="text-gray-600 font-poppins text-center">
-                    Affordable groceries and doorstep deliveries have made life easier for elderly and low-income families.
+                    Affordable groceries and doorstep deliveries have made life
+                    easier for elderly and low-income families.
                   </p>
                 </div>
               </motion.div>
@@ -334,7 +380,8 @@ const Page = () => {
                   </h3>
                   <div className="h-px w-16 bg-primaryBlue mb-4 mx-auto opacity-50" />
                   <p className="text-gray-600 font-poppins text-center">
-                    Our business model has transformed local economies by creating sustainable employment opportunities
+                    Our business model has transformed local economies by
+                    creating sustainable employment opportunities
                   </p>
                 </div>
               </motion.div>
@@ -362,7 +409,8 @@ const Page = () => {
                   </h3>
                   <div className="h-px w-16 bg-primaryBlue mb-4 mx-auto opacity-50" />
                   <p className="text-gray-600 font-poppins text-center">
-                    Showcasing the abilities of individuals with disabilities, we are breaking stereotypes and fostering acceptance.
+                    Showcasing the abilities of individuals with disabilities,
+                    we are breaking stereotypes and fostering acceptance.
                   </p>
                 </div>
               </motion.div>
@@ -370,89 +418,75 @@ const Page = () => {
           </div>
         </section>
 
-
-
         {/* Team Section */}
-        <section className="py-16 bg-gradient-to-b from-light to-gray-50">
+        <section className="py-16 bg-gradient-to-b from-gray-100 via-white to-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-5xl font-bold text-center text-ultravioletBlue mb-12 font-serif">Our Team</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="flex flex-col items-center"
-              >
-                <div className="w-48 h-48 rounded-full overflow-hidden mb-4">
-                  <Image
-                    src="/person1.jpg"
-                    alt="Sooraj Santhosh"
-                    width={192}
-                    height={192}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold text-ultravioletBlue mb-1 font-poppins">Sooraj Santhosh</h3>
-                <p className="text-ultravioletBlue/80 font-poppins">Founder & Managing Partners
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="flex flex-col items-center"
-              >
-                <div className="w-48 h-48 rounded-full overflow-hidden mb-4">
-                  <Image
-                    src="/person2.jpg"
-                    alt="Team Member 2"
-                    width={192}
-                    height={192}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold text-ultravioletBlue mb-1 font-poppins">Santhosh Kumar S</h3>
-                <p className="text-ultravioletBlue/80 font-poppins">Partners, Operation Heads</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="flex flex-col items-center"
-              >
-                <div className="w-48 h-48 rounded-full overflow-hidden mb-4">
-                  <Image
-                    src="/person3.jpg"
-                    alt="Team Member 3"
-                    width={192}
-                    height={192}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold text-ultravioletBlue mb-1 font-poppins">Mike Johnson</h3>
-                <p className="text-ultravioletBlue/80 font-poppins">Technology Lead</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-col items-center"
-              >
-                <div className="w-48 h-48 rounded-full overflow-hidden mb-4">
-                  <Image
-                    src="/person4.jpg"
-                    alt="Team Member 4"
-                    width={192}
-                    height={192}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold text-ultravioletBlue mb-1 font-poppins">Sarah Williams</h3>
-                <p className="text-ultravioletBlue/80 font-poppins">Community Manager</p>
-              </motion.div>
+            <h2 className="text-5xl font-extrabold text-center text-gradient bg-clip-text text-ultravioletBlue mb-12 font-serif">
+              Meet Our Team
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  name: "Sooraj Santhosh",
+                  position: "Founder & Managing Partners",
+                  icon: <FaUsers />,
+                },
+                {
+                  name: "Santhosh Kumar S",
+                  position: "Partners, Operation Heads",
+                  icon: <FaCogs />,
+                },
+                {
+                  name: "Aswin M C",
+                  position: "Store Manager - Kozhikode",
+                  icon: <FaStore />,
+                },
+                {
+                  name: "Ayyappan",
+                  position: "Store Manager - Ottapalam",
+                  icon: <FaStore />,
+                },
+                {
+                  name: "Anju O",
+                  position: "Store Associate",
+                  icon: <FaUser />,
+                },
+                {
+                  name: "Lakshmidevi G A",
+                  position: "Store Associate",
+                  icon: <FaUser />,
+                },
+                {
+                  name: "Ramadevi",
+                  position: "Store Associate",
+                  icon: <FaUser />,
+                },
+                { name: "Prabha S", position: "Accounts", icon: <FaUser /> },
+              ].map((member, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex items-center flex-col gap-4 p-6 border rounded-2xl shadow-lg bg-white hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="w-16 h-16 rounded-full bg-ultravioletBlue/20 flex items-center justify-center">
+                    <div className="text-2xl">{member.icon}</div>
+                  </div>
+                  <div>
+                    <center>
+                      <h3 className="text-2xl font-semibold text-ultravioletBlue font-poppins">
+                        {member.name}
+                      </h3>
+                    </center>
+                    <center>
+                      <p className="text-gray-700 font-poppins">
+                        {member.position}
+                      </p>
+                    </center>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -460,21 +494,22 @@ const Page = () => {
         {/* Call to Action Section */}
         <section className="pt-16 bg-gradient-to-br from-lightBlue to-secondaryBlue">
           <div className="container mx-auto px-4 text-center pb-2">
-            <h2 className="text-5xl font-bold text-ultravioletBlue mb-8 font-serif">Join Our Mission</h2>
-            <p className="text-lg text-ultravioletBlue/80 mb-8 max-w-2xl mx-auto font-poppins">
-              At SMILE Store, every purchase, every partnership, and every story contributes to a greater good. Together, we can create a world where compassion leads and inclusion thrives.
-
+            <h2 className="text-5xl font-bold text-ultravioletBlue mb-8 font-serif">
+              Join Our Mission
+            </h2>
+            <p className="text-lg text-black/80 mb-8 max-w-2xl mx-auto font-poppins">
+              At SMILE Store, every purchase, every partnership, and every story
+              contributes to a greater good. Together, we can create a world
+              where compassion leads and inclusion thrives.
             </p>
             <a href="/partners">
               <button className="bg-primaryBlue text-light px-8 py-3 rounded-full font-semibold hover:bg-secondaryBlue transition-colors font-poppins animate-pulseCustom">
                 Partner With Us
               </button>
             </a>
-
           </div>
           <Footer />
         </section>
-
       </div>
     </>
   );

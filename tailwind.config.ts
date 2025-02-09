@@ -17,7 +17,7 @@ export default {
         primaryBlue : "#17A8D5",
         secondaryBlue : "#95D3EC",
         secondaryRed : "#FF5A62",
-        ultravioletBlue : "#4B4E6D",
+        ultravioletBlue : "#17A8D5",
         lightBlue : "#E7F8FF",
         cherryBlossomRed : "#F3A9B1",
         mimiRed : "#EDD1D8",

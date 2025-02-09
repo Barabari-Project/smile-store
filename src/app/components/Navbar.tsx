@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { HiArrowUpRight } from "react-icons/hi2";
-import Image from 'next/image';
+import Link from "next/link";
 const NavBarMenu = [
   {
     id: 1,
@@ -32,9 +32,12 @@ const Navbar = () => {
     <nav className="px-0 z-30 sticky top-0 bg-primary border-b-2 navbarModification">
       <div className="container px-0 py-6 flex justify-between items-center bg-white">
         {/* Logo Section */}
+        <Link href={"/"}>
         <div className="flex-shrink-0">
-        <Image src="/smile_store_logo.png" alt="Logo" width={30} height={16} className="h-16 w-auto" />   
+        <img src="/logo_resized.png" alt="Logo" className="h-16 w-auto" />   
          </div>
+        </Link>
+        
 
         {/* Menu Section */}
         <div className="hidden lg:block flex-grow text-right bg-white ">

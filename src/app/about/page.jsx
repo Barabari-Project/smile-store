@@ -179,30 +179,20 @@ const Page = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Left Side - Logo */}
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
+              
                 className="flex flex-col items-center justify-center"
               >
                 {/* Increased size of logo container */}
-                <div className="relative w-96 h-96 mb-8">
+                <div className="relative w-full h-96 mb-8">
                   <motion.div
-                    animate={{
-                      scale: [1, 1.05, 1],
-                      rotate: [0, 2, 0]
-                    }}
-                    transition={{
-                      duration: 6,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
+                    
                     className="w-full h-full"
                   >
                     <Image
                       src="/smile_store_logo.png"
                       alt="SMILE Store Logo"
                       fill
-                      className="object-contain drop-shadow-xl"
+                      className="object-contain drop-shadow-xl w-full"
                       priority
                     />
                   </motion.div>

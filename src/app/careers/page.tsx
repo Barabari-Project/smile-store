@@ -81,7 +81,7 @@ const CareersPage = () => {
                   <h3 className="text-2xl font-semibold text-ultravioletBlue mb-3 font-serif">
                     {item.title}
                   </h3>
-                  <p className="text-ultravioletBlue/80 font-poppins text-xl">
+                  <p className="text-gray-700 font-poppins text-xl">
                     {item.description}
                   </p>
                 </motion.div>
@@ -158,14 +158,14 @@ const CareersPage = () => {
                   <p className="text-secondaryRed mb-4 font-poppins text-xl">
                     {job.location}
                   </p>
-                  <p className="text-ultravioletBlue/80 mb-4 font-poppins">
+                  <p className="text-gray-800 mb-4 font-poppins">
                     {job.description}
                   </p>
                   <div className="space-y-2">
-                    <p className="font-semibold text-ultravioletBlue font-poppins">
+                    <p className="font-semibold text-black font-poppins">
                       Requirements:
                     </p>
-                    <ul className="list-disc pl-5 text-ultravioletBlue/80 font-poppins">
+                    <ul className="list-disc pl-5 text-gray-600 font-poppins">
                       {job.requirements.map((req, i) => (
                         <li key={i}>{req}</li>
                       ))}
@@ -174,6 +174,23 @@ const CareersPage = () => {
                 </motion.div>
               ))}
             </div>
+            <center>
+            <p className="text-black mb-8 font-poppins font-bold  text-xl pt-10">
+              Ready to make a difference? Send your CV to
+              careers@smilegroceries.com
+            </p>
+            <motion.a
+              href="mailto:careers@smilegroceries.com"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="get-in-touch hover:animate-pulseCustom inline-block"
+            >
+              <span className="flex items-center space-x-2">
+                <div className="text-3xl font-serif">Apply Now</div>
+                <HiArrowLongRight className="text-xl" />
+              </span>
+            </motion.a>
+            </center>
           </div>
         </div>
 
@@ -241,11 +258,11 @@ const CareersPage = () => {
                 >
                   <div className=" text-3xl flex items-center mb-4">
                     {benefit.icon}
-                    <h3 className="text-2xl font-serif font-semibold text-ultravioletBlue ml-3">
+                    <h3 className="text-2xl font-serif font-semibold text-gray-900 ml-3">
                       {benefit.title}
                     </h3>
                   </div>
-                  <p className="text-ultravioletBlue/80 text-md font-poppins">
+                  <p className="text-gray-800 text-md font-poppins">
                     {benefit.description}
                   </p>
                 </motion.div>
@@ -255,7 +272,7 @@ const CareersPage = () => {
         </div>
 
         {/* Apply Section */}
-        <div className="py-16 bg-white">
+        {/* <div className="py-16 bg-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-5xl font-serif font-bold text-ultravioletBlue mb-8">
               How to Apply?
@@ -276,7 +293,7 @@ const CareersPage = () => {
               </span>
             </motion.a>
           </div>
-        </div>
+        </div> */}
       </section>
       <Footer />
     </>

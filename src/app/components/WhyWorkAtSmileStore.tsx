@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import {
+  FaBullseye,
   FaPeopleArrows,
-  FaShoppingCart,
+  FaChartLine,
   FaHandsHelping,
-  FaHome,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -48,22 +48,22 @@ const WhyWorkAtSmileStore = () => {
 
   const content = [
     {
-      icon: <FaPeopleArrows />,
+      icon: <FaBullseye />,
       heading: "Purpose-Driven Works",
       text: "Make a difference in the lives of persons with disabilities and underserved communities.",
     },
     {
-      icon: <FaShoppingCart />,
+      icon: <FaPeopleArrows />,
       heading: "Inclusive Environment",
       text: "We are committed to building a workplace where everyone feels valued, regardless of ability or background.",
     },
     {
-      icon: <FaHandsHelping />,
+      icon: <FaChartLine />,
       heading: "Career Growth",
       text: "From store operations to leadership roles, we provide opportunities for personal and professional development.",
     },
     {
-      icon: <FaHome />,
+      icon: <FaHandsHelping />,
       heading: "Community Impact",
       text: "Every role contributes to a mission of creating stronger, more inclusive neighborhoods.",
     },

@@ -59,7 +59,7 @@ const Hero = () => {
                   <img
                     src="/IIMLogo.png"
                     alt="IIM Logo"
-                    className="inline-block w-24 h-8 ml-2"
+                    className="inline-block w-36 h-12 ml-2"
                   />
                 </motion.p>
 

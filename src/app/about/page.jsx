@@ -222,7 +222,7 @@ const Page = () => {
             <section className="pt-4 pb-4 relative bg-gradient-to-b from-white to-gray-50">
               <center>
                 {" "}
-                <img src="/approach_smile_store.png"></img>
+                <img src="/approach-sstore.png"></img>
               </center>
             </section>
 

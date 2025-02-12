@@ -12,6 +12,7 @@ import {
   FaHandHoldingHeart,
   FaBalanceScale,
 } from "react-icons/fa";
+import WhyWorkAtSmileStore from "../components/WhyWorkAtSmileStore";
 
 const CareersPage = () => {
   return (
@@ -19,7 +20,7 @@ const CareersPage = () => {
       <Navbar />
       <section className="bg-white px-0 overflow-hidden relative">
         {/* Hero Section */}
-        <section className="container mx-auto px-4 py-16 text-center">
+        <section className="container mx-auto px-4 pt-16 pb-6 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -32,7 +33,7 @@ const CareersPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="text-2xl md:text-2xl text-gray-600 mb-8"
+            className="text-2xl md:text-2xl text-gray-600"
           >
             At SMILE Store, we&apos;re more than just a retail chain—we&apos;re
             a movement that empowers individuals, supports communities, and
@@ -43,7 +44,8 @@ const CareersPage = () => {
         </section>
 
         {/* Why Work With Us Section */}
-        <div className=" bg-white">
+        <WhyWorkAtSmileStore/>
+        {/* <div className=" bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-5xl font-bold text-center text-ultravioletBlue mb-12 font-serif">
               Why Work with SMILE Store?
@@ -88,7 +90,7 @@ const CareersPage = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
 
 

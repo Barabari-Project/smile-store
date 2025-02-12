@@ -93,10 +93,10 @@ export default function PartnersPage() {
           <section className="pt-4 pb-16 relative bg-gradient-to-b from-white to-gray-50">
             <center>
               {" "}
-              <img src="/approach_smile_store.png"></img>
+              <img src="/approach-sstore.png"></img>
             </center>
           </section>
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 mt-6">
             {partnershipModels.map((model, index) => (
               <div
                 key={index}

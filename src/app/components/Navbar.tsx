@@ -6,23 +6,23 @@ import Link from "next/link";
 const NavBarMenu = [
   {
     id: 1,
-    title: "Home",
-    path: "/",
-  },
-  {
-    id: 2,
     title: "About Us",
     path: "/about",
   },
   {
-    id: 3,
+    id: 2,
     title: "Partners",
     path: "/partners",
   },
   {
-    id: 4,
+    id: 3,
     title: "Careers",
     path: "/careers",
+  },
+  {
+    id: 4,
+    title: "Contact",
+    path: "/contact",
   },
 ];
 const Navbar = () => {
@@ -34,7 +34,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <Link href={"/"}>
           <div className="flex-shrink-0">
-            <img src="/logo_resized.png" alt="Logo" className="h-16 w-auto" />
+            <img src="/smile_store_logo.png" alt="Logo" className="h-16 w-auto" />
           </div>
         </Link>
 

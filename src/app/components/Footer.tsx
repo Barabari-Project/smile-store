@@ -5,6 +5,7 @@ import {
   FaMapMarkerAlt,
   FaInstagram,
   FaFacebook,
+  FaLinkedin,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -74,7 +75,7 @@ const Footer = () => {
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 mb-6">
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/smilegroceries/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-100 hover:text-blue-200 transition-colors"
@@ -82,12 +83,20 @@ const Footer = () => {
             <FaInstagram size={36} />
           </a>
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/people/Smilegroceries/61573051232624/?sk=mentions"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-100 hover:text-blue-200 transition-colors"
           >
             <FaFacebook size={36} />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/smile-groceries/about/?viewAsMember=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-100 hover:text-blue-200 transition-colors"
+          >
+            <FaLinkedin size={36} />
           </a>
         </div>
 
